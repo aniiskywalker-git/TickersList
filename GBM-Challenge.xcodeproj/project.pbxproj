@@ -8,14 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		180E698E2ADF7C2A002EA27A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E698D2ADF7C2A002EA27A /* AppDelegate.swift */; };
-		180E69902ADF7C2A002EA27A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E698F2ADF7C2A002EA27A /* SceneDelegate.swift */; };
-		180E69922ADF7C2A002EA27A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E69912ADF7C2A002EA27A /* ViewController.swift */; };
-		180E69952ADF7C2A002EA27A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180E69932ADF7C2A002EA27A /* Main.storyboard */; };
+		180E69952ADF7C2A002EA27A /* TickersViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180E69932ADF7C2A002EA27A /* TickersViewController.storyboard */; };
 		180E69972ADF7C2C002EA27A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180E69962ADF7C2C002EA27A /* Assets.xcassets */; };
 		180E699A2ADF7C2C002EA27A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180E69982ADF7C2C002EA27A /* LaunchScreen.storyboard */; };
 		180E69A52ADF7C2C002EA27A /* GBM_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E69A42ADF7C2C002EA27A /* GBM_ChallengeTests.swift */; };
 		180E69AF2ADF7C2C002EA27A /* GBM_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E69AE2ADF7C2C002EA27A /* GBM_ChallengeUITests.swift */; };
 		180E69B12ADF7C2C002EA27A /* GBM_ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E69B02ADF7C2C002EA27A /* GBM_ChallengeUITestsLaunchTests.swift */; };
+		186526B32ADFACAA0028B815 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 186526B22ADFACAA0028B815 /* DGCharts */; };
+		186526B52ADFAFED0028B815 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526B42ADFAFED0028B815 /* Endpoint.swift */; };
+		186526B72ADFB0960028B815 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526B62ADFB0960028B815 /* NetworkService.swift */; };
+		186526B92ADFB1360028B815 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526B82ADFB1360028B815 /* NetworkConfig.swift */; };
+		186526C02ADFB3E80028B815 /* TickersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526BF2ADFB3E80028B815 /* TickersRepository.swift */; };
+		186526CA2ADFBAAE0028B815 /* TickerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526C92ADFBAAE0028B815 /* TickerDetail.swift */; };
+		186526CD2AE099B80028B815 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526CC2AE099B80028B815 /* APIEndpoints.swift */; };
+		186526D62AE0C5320028B815 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526D52AE0C5320028B815 /* ConnectionError.swift */; };
+		186526D82AE0C5600028B815 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526D72AE0C5600028B815 /* Cancellable.swift */; };
+		186526DA2AE0CB7A0028B815 /* DispatchQueueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526D92AE0CB7A0028B815 /* DispatchQueueType.swift */; };
+		186526DC2AE0CEDA0028B815 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526DB2AE0CEDA0028B815 /* DataTransferService.swift */; };
+		186526E32AE0D1280028B815 /* TickersResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526E22AE0D1280028B815 /* TickersResponseDTO+Mapping.swift */; };
+		186526E52AE0D3E10028B815 /* TickerDetailResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526E42AE0D3E10028B815 /* TickerDetailResponseDTO+Mapping.swift */; };
+		186526E92AE0D7270028B815 /* RepositoryTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526E82AE0D7270028B815 /* RepositoryTask.swift */; };
+		186526ED2AE0D7EF0028B815 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526EC2AE0D7EF0028B815 /* Ticker.swift */; };
+		186526F32AE0E3CB0028B815 /* DefaultTickersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526F22AE0E3CB0028B815 /* DefaultTickersRepository.swift */; };
+		186526F52AE0E3E10028B815 /* DefaultTickerDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526F42AE0E3E10028B815 /* DefaultTickerDetailRepository.swift */; };
+		186526F82AE0E9FD0028B815 /* TickerDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526F72AE0E9FD0028B815 /* TickerDetailRepository.swift */; };
+		186526FB2AE0ED0B0028B815 /* TickersListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526FA2AE0ED0B0028B815 /* TickersListUseCase.swift */; };
+		186526FD2AE0EE7F0028B815 /* TickerDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526FC2AE0EE7F0028B815 /* TickerDetailUseCase.swift */; };
+		186527082AE0F3440028B815 /* TickerDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186527072AE0F3440028B815 /* TickerDetailsViewController.storyboard */; };
+		1865270D2AE0F48D0028B815 /* AppConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865270C2AE0F48D0028B815 /* AppConfigurations.swift */; };
+		186527102AE0F53E0028B815 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865270F2AE0F53E0028B815 /* AppFlowCoordinator.swift */; };
+		186527132AE0F57D0028B815 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186527122AE0F57D0028B815 /* AppDIContainer.swift */; };
+		186527152AE0F6720028B815 /* TickersSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186527142AE0F6720028B815 /* TickersSceneDIContainer.swift */; };
+		186527172AE0F6A80028B815 /* TickersSceneFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186527162AE0F6A80028B815 /* TickersSceneFlowCoordinator.swift */; };
+		186527192AE0F86E0028B815 /* TickersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186527182AE0F86E0028B815 /* TickersListViewModel.swift */; };
+		1865271B2AE1B9040028B815 /* TickersListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865271A2AE1B9040028B815 /* TickersListItemViewModel.swift */; };
+		1865271D2AE1BF2D0028B815 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865271C2AE1BF2D0028B815 /* Observable.swift */; };
+		186527202AE1C4070028B815 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865271F2AE1C4070028B815 /* StoryboardInstantiable.swift */; };
+		186527232AE1D1280028B815 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186527222AE1D1280028B815 /* Alertable.swift */; };
+		187556142AE30CAC0054C4B2 /* TickersListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187556132AE30CAC0054C4B2 /* TickersListItemCell.swift */; };
+		187556182AE3231F0054C4B2 /* TickerDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187556172AE3231F0054C4B2 /* TickerDetailsViewModel.swift */; };
+		18C5E1EE2AE2488E00C0352A /* TickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5E1ED2AE2488E00C0352A /* TickersViewController.swift */; };
+		18F27EEF2ADF9D3F000DEB3D /* TickerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F27EEE2ADF9D3F000DEB3D /* TickerDetailsViewController.swift */; };
+		18F27EF12ADF9DE4000DEB3D /* TickersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F27EF02ADF9DE4000DEB3D /* TickersTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +72,7 @@
 /* Begin PBXFileReference section */
 		180E698A2ADF7C2A002EA27A /* GBM-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GBM-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		180E698D2ADF7C2A002EA27A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		180E698F2ADF7C2A002EA27A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		180E69912ADF7C2A002EA27A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		180E69942ADF7C2A002EA27A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		180E69942ADF7C2A002EA27A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TickersViewController.storyboard; sourceTree = "<group>"; };
 		180E69962ADF7C2C002EA27A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		180E69992ADF7C2C002EA27A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		180E699B2ADF7C2C002EA27A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +81,41 @@
 		180E69AA2ADF7C2C002EA27A /* GBM-ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GBM-ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		180E69AE2ADF7C2C002EA27A /* GBM_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBM_ChallengeUITests.swift; sourceTree = "<group>"; };
 		180E69B02ADF7C2C002EA27A /* GBM_ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBM_ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		186526B42ADFAFED0028B815 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		186526B62ADFB0960028B815 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		186526B82ADFB1360028B815 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		186526BF2ADFB3E80028B815 /* TickersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersRepository.swift; sourceTree = "<group>"; };
+		186526C92ADFBAAE0028B815 /* TickerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TickerDetail.swift; path = ../../Common/TickerDetail.swift; sourceTree = "<group>"; };
+		186526CC2AE099B80028B815 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		186526D52AE0C5320028B815 /* ConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionError.swift; sourceTree = "<group>"; };
+		186526D72AE0C5600028B815 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		186526D92AE0CB7A0028B815 /* DispatchQueueType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueType.swift; sourceTree = "<group>"; };
+		186526DB2AE0CEDA0028B815 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		186526E22AE0D1280028B815 /* TickersResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TickersResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
+		186526E42AE0D3E10028B815 /* TickerDetailResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TickerDetailResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
+		186526E82AE0D7270028B815 /* RepositoryTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTask.swift; sourceTree = "<group>"; };
+		186526EC2AE0D7EF0028B815 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
+		186526F22AE0E3CB0028B815 /* DefaultTickersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTickersRepository.swift; sourceTree = "<group>"; };
+		186526F42AE0E3E10028B815 /* DefaultTickerDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTickerDetailRepository.swift; sourceTree = "<group>"; };
+		186526F72AE0E9FD0028B815 /* TickerDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailRepository.swift; sourceTree = "<group>"; };
+		186526FA2AE0ED0B0028B815 /* TickersListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersListUseCase.swift; sourceTree = "<group>"; };
+		186526FC2AE0EE7F0028B815 /* TickerDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailUseCase.swift; sourceTree = "<group>"; };
+		186527072AE0F3440028B815 /* TickerDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TickerDetailsViewController.storyboard; sourceTree = "<group>"; };
+		1865270C2AE0F48D0028B815 /* AppConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurations.swift; sourceTree = "<group>"; };
+		1865270F2AE0F53E0028B815 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		186527122AE0F57D0028B815 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		186527142AE0F6720028B815 /* TickersSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersSceneDIContainer.swift; sourceTree = "<group>"; };
+		186527162AE0F6A80028B815 /* TickersSceneFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersSceneFlowCoordinator.swift; sourceTree = "<group>"; };
+		186527182AE0F86E0028B815 /* TickersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersListViewModel.swift; sourceTree = "<group>"; };
+		1865271A2AE1B9040028B815 /* TickersListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersListItemViewModel.swift; sourceTree = "<group>"; };
+		1865271C2AE1BF2D0028B815 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		1865271F2AE1C4070028B815 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		186527222AE1D1280028B815 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		187556132AE30CAC0054C4B2 /* TickersListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersListItemCell.swift; sourceTree = "<group>"; };
+		187556172AE3231F0054C4B2 /* TickerDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailsViewModel.swift; sourceTree = "<group>"; };
+		18C5E1ED2AE2488E00C0352A /* TickersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersViewController.swift; sourceTree = "<group>"; };
+		18F27EEE2ADF9D3F000DEB3D /* TickerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailsViewController.swift; sourceTree = "<group>"; };
+		18F27EF02ADF9DE4000DEB3D /* TickersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186526B32ADFACAA0028B815 /* DGCharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +167,13 @@
 		180E698C2ADF7C2A002EA27A /* GBM-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				186527092AE0F43C0028B815 /* Application */,
+				186526D12AE09A960028B815 /* Presentation */,
+				186526EA2AE0D7D70028B815 /* Domain */,
+				186526DD2AE0CF4A0028B815 /* Data */,
+				186526D22AE0B7BE0028B815 /* Infrastructure */,
+				186526D32AE0B7D80028B815 /* Common */,
 				180E698D2ADF7C2A002EA27A /* AppDelegate.swift */,
-				180E698F2ADF7C2A002EA27A /* SceneDelegate.swift */,
-				180E69912ADF7C2A002EA27A /* ViewController.swift */,
-				180E69932ADF7C2A002EA27A /* Main.storyboard */,
 				180E69962ADF7C2C002EA27A /* Assets.xcassets */,
 				180E69982ADF7C2C002EA27A /* LaunchScreen.storyboard */,
 				180E699B2ADF7C2C002EA27A /* Info.plist */,
@@ -127,6 +198,261 @@
 			path = "GBM-ChallengeUITests";
 			sourceTree = "<group>";
 		};
+		186526BA2ADFB31E0028B815 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				186526B62ADFB0960028B815 /* NetworkService.swift */,
+				186526B42ADFAFED0028B815 /* Endpoint.swift */,
+				186526B82ADFB1360028B815 /* NetworkConfig.swift */,
+				186526DB2AE0CEDA0028B815 /* DataTransferService.swift */,
+			);
+			name = Network;
+			path = Network/Network;
+			sourceTree = "<group>";
+		};
+		186526D12AE09A960028B815 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				186526FF2AE0F1D00028B815 /* TickersScene */,
+				1865271E2AE1BF310028B815 /* Utils */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		186526D22AE0B7BE0028B815 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				186526BA2ADFB31E0028B815 /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		186526D32AE0B7D80028B815 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				186526D52AE0C5320028B815 /* ConnectionError.swift */,
+				186526D72AE0C5600028B815 /* Cancellable.swift */,
+				186526D92AE0CB7A0028B815 /* DispatchQueueType.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		186526DD2AE0CF4A0028B815 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				186526E62AE0D70D0028B815 /* Repositories */,
+				186526E12AE0D0710028B815 /* DataMapping */,
+				186526DE2AE0CF510028B815 /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		186526DE2AE0CF510028B815 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				186526CC2AE099B80028B815 /* APIEndpoints.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		186526E12AE0D0710028B815 /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				186526E22AE0D1280028B815 /* TickersResponseDTO+Mapping.swift */,
+				186526E42AE0D3E10028B815 /* TickerDetailResponseDTO+Mapping.swift */,
+			);
+			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		186526E62AE0D70D0028B815 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				186526F22AE0E3CB0028B815 /* DefaultTickersRepository.swift */,
+				186526F42AE0E3E10028B815 /* DefaultTickerDetailRepository.swift */,
+				186526E72AE0D7140028B815 /* Utils */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		186526E72AE0D7140028B815 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				186526E82AE0D7270028B815 /* RepositoryTask.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		186526EA2AE0D7D70028B815 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				186526F92AE0EC930028B815 /* UseCases */,
+				186526F62AE0E4B90028B815 /* Interfaces */,
+				186526EB2AE0D7E10028B815 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		186526EB2AE0D7E10028B815 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				186526EC2AE0D7EF0028B815 /* Ticker.swift */,
+				186526C92ADFBAAE0028B815 /* TickerDetail.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		186526F62AE0E4B90028B815 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				186526FE2AE0F1A90028B815 /* Repository */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		186526F92AE0EC930028B815 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				186526FA2AE0ED0B0028B815 /* TickersListUseCase.swift */,
+				186526FC2AE0EE7F0028B815 /* TickerDetailUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		186526FE2AE0F1A90028B815 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				186526BF2ADFB3E80028B815 /* TickersRepository.swift */,
+				186526F72AE0E9FD0028B815 /* TickerDetailRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		186526FF2AE0F1D00028B815 /* TickersScene */ = {
+			isa = PBXGroup;
+			children = (
+				186527002AE0F1E50028B815 /* Flows */,
+				186527012AE0F20B0028B815 /* TickersList */,
+				186527042AE0F2A70028B815 /* TickerDetail */,
+			);
+			path = TickersScene;
+			sourceTree = "<group>";
+		};
+		186527002AE0F1E50028B815 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				186527162AE0F6A80028B815 /* TickersSceneFlowCoordinator.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		186527012AE0F20B0028B815 /* TickersList */ = {
+			isa = PBXGroup;
+			children = (
+				186527022AE0F2600028B815 /* ViewModel */,
+				186527032AE0F27F0028B815 /* View */,
+			);
+			path = TickersList;
+			sourceTree = "<group>";
+		};
+		186527022AE0F2600028B815 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				186527182AE0F86E0028B815 /* TickersListViewModel.swift */,
+				1865271A2AE1B9040028B815 /* TickersListItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		186527032AE0F27F0028B815 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18C5E1ED2AE2488E00C0352A /* TickersViewController.swift */,
+				180E69932ADF7C2A002EA27A /* TickersViewController.storyboard */,
+				18C5E1F22AE2645E00C0352A /* TableViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		186527042AE0F2A70028B815 /* TickerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				186527062AE0F30C0028B815 /* ViewModel */,
+				186527052AE0F3070028B815 /* View */,
+			);
+			path = TickerDetail;
+			sourceTree = "<group>";
+		};
+		186527052AE0F3070028B815 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18F27EEE2ADF9D3F000DEB3D /* TickerDetailsViewController.swift */,
+				186527072AE0F3440028B815 /* TickerDetailsViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		186527062AE0F30C0028B815 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				187556172AE3231F0054C4B2 /* TickerDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		186527092AE0F43C0028B815 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1865270C2AE0F48D0028B815 /* AppConfigurations.swift */,
+				1865270F2AE0F53E0028B815 /* AppFlowCoordinator.swift */,
+				186527112AE0F56A0028B815 /* DIContainer */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		186527112AE0F56A0028B815 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				186527122AE0F57D0028B815 /* AppDIContainer.swift */,
+				186527142AE0F6720028B815 /* TickersSceneDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		1865271E2AE1BF310028B815 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				186527212AE1D1100028B815 /* Protocols */,
+				1865271C2AE1BF2D0028B815 /* Observable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		186527212AE1D1100028B815 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1865271F2AE1C4070028B815 /* StoryboardInstantiable.swift */,
+				186527222AE1D1280028B815 /* Alertable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		187556122AE30C860054C4B2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				187556132AE30CAC0054C4B2 /* TickersListItemCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		18C5E1F22AE2645E00C0352A /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18F27EF02ADF9DE4000DEB3D /* TickersTableViewController.swift */,
+				187556122AE30C860054C4B2 /* Cells */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +469,9 @@
 			dependencies = (
 			);
 			name = "GBM-Challenge";
+			packageProductDependencies = (
+				186526B22ADFACAA0028B815 /* DGCharts */,
+			);
 			productName = "GBM-Challenge";
 			productReference = 180E698A2ADF7C2A002EA27A /* GBM-Challenge.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +544,9 @@
 				Base,
 			);
 			mainGroup = 180E69812ADF7C2A002EA27A;
+			packageReferences = (
+				186526B12ADFACAA0028B815 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 180E698B2ADF7C2A002EA27A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +565,8 @@
 			files = (
 				180E699A2ADF7C2C002EA27A /* LaunchScreen.storyboard in Resources */,
 				180E69972ADF7C2C002EA27A /* Assets.xcassets in Resources */,
-				180E69952ADF7C2A002EA27A /* Main.storyboard in Resources */,
+				180E69952ADF7C2A002EA27A /* TickersViewController.storyboard in Resources */,
+				186527082AE0F3440028B815 /* TickerDetailsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +591,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				180E69922ADF7C2A002EA27A /* ViewController.swift in Sources */,
+				186526B72ADFB0960028B815 /* NetworkService.swift in Sources */,
+				186526FD2AE0EE7F0028B815 /* TickerDetailUseCase.swift in Sources */,
+				186526E32AE0D1280028B815 /* TickersResponseDTO+Mapping.swift in Sources */,
+				187556142AE30CAC0054C4B2 /* TickersListItemCell.swift in Sources */,
+				1865271B2AE1B9040028B815 /* TickersListItemViewModel.swift in Sources */,
+				186526D62AE0C5320028B815 /* ConnectionError.swift in Sources */,
+				186526DA2AE0CB7A0028B815 /* DispatchQueueType.swift in Sources */,
+				186526CA2ADFBAAE0028B815 /* TickerDetail.swift in Sources */,
+				186526F32AE0E3CB0028B815 /* DefaultTickersRepository.swift in Sources */,
+				186526E92AE0D7270028B815 /* RepositoryTask.swift in Sources */,
 				180E698E2ADF7C2A002EA27A /* AppDelegate.swift in Sources */,
-				180E69902ADF7C2A002EA27A /* SceneDelegate.swift in Sources */,
+				186527192AE0F86E0028B815 /* TickersListViewModel.swift in Sources */,
+				186526CD2AE099B80028B815 /* APIEndpoints.swift in Sources */,
+				186526B92ADFB1360028B815 /* NetworkConfig.swift in Sources */,
+				186526ED2AE0D7EF0028B815 /* Ticker.swift in Sources */,
+				18C5E1EE2AE2488E00C0352A /* TickersViewController.swift in Sources */,
+				186526D82AE0C5600028B815 /* Cancellable.swift in Sources */,
+				186526FB2AE0ED0B0028B815 /* TickersListUseCase.swift in Sources */,
+				186527152AE0F6720028B815 /* TickersSceneDIContainer.swift in Sources */,
+				186526F52AE0E3E10028B815 /* DefaultTickerDetailRepository.swift in Sources */,
+				186526F82AE0E9FD0028B815 /* TickerDetailRepository.swift in Sources */,
+				186526E52AE0D3E10028B815 /* TickerDetailResponseDTO+Mapping.swift in Sources */,
+				186527102AE0F53E0028B815 /* AppFlowCoordinator.swift in Sources */,
+				1865270D2AE0F48D0028B815 /* AppConfigurations.swift in Sources */,
+				186526B52ADFAFED0028B815 /* Endpoint.swift in Sources */,
+				186527172AE0F6A80028B815 /* TickersSceneFlowCoordinator.swift in Sources */,
+				18F27EEF2ADF9D3F000DEB3D /* TickerDetailsViewController.swift in Sources */,
+				18F27EF12ADF9DE4000DEB3D /* TickersTableViewController.swift in Sources */,
+				186527132AE0F57D0028B815 /* AppDIContainer.swift in Sources */,
+				1865271D2AE1BF2D0028B815 /* Observable.swift in Sources */,
+				186526DC2AE0CEDA0028B815 /* DataTransferService.swift in Sources */,
+				186527232AE1D1280028B815 /* Alertable.swift in Sources */,
+				187556182AE3231F0054C4B2 /* TickerDetailsViewModel.swift in Sources */,
+				186527202AE1C4070028B815 /* StoryboardInstantiable.swift in Sources */,
+				186526C02ADFB3E80028B815 /* TickersRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +662,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		180E69932ADF7C2A002EA27A /* Main.storyboard */ = {
+		180E69932ADF7C2A002EA27A /* TickersViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				180E69942ADF7C2A002EA27A /* Base */,
 			);
-			name = Main.storyboard;
+			name = TickersViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		180E69982ADF7C2C002EA27A /* LaunchScreen.storyboard */ = {
@@ -438,6 +803,8 @@
 		180E69B52ADF7C2C002EA27A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_BASE_URL = "http://api.marketstack.com/v1";
+				API_KEY = f34c0dfa5a931c8e57db2f9f2606dec1;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -447,9 +814,10 @@
 				INFOPLIST_FILE = "GBM-Challenge/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TickersViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,6 +834,8 @@
 		180E69B62ADF7C2C002EA27A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_BASE_URL = "http://api.marketstack.com/v1";
+				API_KEY = f34c0dfa5a931c8e57db2f9f2606dec1;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -475,9 +845,10 @@
 				INFOPLIST_FILE = "GBM-Challenge/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TickersViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -607,6 +978,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		186526B12ADFACAA0028B815 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		186526B22ADFACAA0028B815 /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 186526B12ADFACAA0028B815 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 180E69822ADF7C2A002EA27A /* Project object */;
 }
