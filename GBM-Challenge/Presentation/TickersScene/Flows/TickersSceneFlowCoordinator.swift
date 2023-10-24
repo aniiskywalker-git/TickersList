@@ -11,7 +11,7 @@ protocol TickersSceneFlowCoordinatorDependencies  {
     func makeTickersListViewController(
         actions: TickersListViewModelActions
     ) -> TickersViewController
-    func makeTickerDetailsViewController(symbol: String) -> UIViewController
+    func makeTickerDetailsViewController(ticker: TickersListItemViewModel) -> UIViewController
 }
 
 final class TickersSceneFlowCoordinator {
@@ -26,14 +26,13 @@ final class TickersSceneFlowCoordinator {
     }
     
     func start() {
-        // Note: here we keep strong reference with actions, this way this flow do not need to be strong referenced
         let actions = TickersListViewModelActions(showTickersDetail: showTickerDetails)
         let vc = dependencies.makeTickersListViewController(actions: actions)
         navigationController?.pushViewController(vc, animated: false)
     }
 
-    private func showTickerDetails(symbol: String) {
-        let vc = dependencies.makeTickerDetailsViewController(symbol: symbol)
+    private func showTickerDetails(ticker: TickersListItemViewModel) {
+        let vc = dependencies.makeTickerDetailsViewController(ticker: ticker)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

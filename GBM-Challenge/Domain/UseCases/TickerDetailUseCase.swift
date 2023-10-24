@@ -9,7 +9,7 @@ import Foundation
 
 
 protocol TickerDetailUseCase {
-    func execute(symbol: TickerDetailUseCaseRequestValue,
+    func execute(symbol: String,
         completion: @escaping (Result<TickerDetailData, Error>) -> Void
     ) -> Cancellable?
 }
@@ -22,15 +22,11 @@ final class DefaultTickerDetailUseCase: TickerDetailUseCase {
         self.tickerDetailRepository = tickerDetailRepository
     }
     
-    func execute(symbol: TickerDetailUseCaseRequestValue, 
+    func execute(symbol: String,
                  completion: @escaping (Result<TickerDetailData, Error>) -> Void) -> Cancellable? {
-        return tickerDetailRepository.fetchTickerDetail(symbol: symbol.symbol) { result in
+        return tickerDetailRepository.fetchTickerDetail(symbol: symbol) { result in
             completion(result)
         }
     }
 
-}
-
-struct TickerDetailUseCaseRequestValue {
-    let symbol: String
 }

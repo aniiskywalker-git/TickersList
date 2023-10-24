@@ -8,13 +8,13 @@
 import Foundation
 
 struct TickersListViewModelActions {
-    let showTickersDetail: (String) -> Void
+    let showTickersDetail: (TickersListItemViewModel) -> Void
 }
 
 protocol TickersListViewModelInput {
     func viewDidLoad()
     func didGetTickers()
-    func didSelectItem(with symbol: String)
+    func didSelectItem(with ticker: TickersListItemViewModel)
 }
 
 protocol TickersListViewModelOutput {
@@ -82,8 +82,8 @@ extension DefaultTickersListViewModel {
     
     func viewDidLoad() { }
     
-    func didSelectItem(with symbol: String) {
-        print("selected item\(symbol)")
-        actions?.showTickersDetail(symbol)
+    func didSelectItem(with ticker: TickersListItemViewModel) {
+        print("selected item\(ticker)")
+        actions?.showTickersDetail(ticker)
     }
 }

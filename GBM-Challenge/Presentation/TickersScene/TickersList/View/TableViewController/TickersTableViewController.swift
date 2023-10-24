@@ -42,6 +42,6 @@ final class TickersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.didSelectItem(with: viewModel.items.value[indexPath.row].symbol ?? "")
+        viewModel.didSelectItem(with: viewModel.items.value[indexPath.row])
     }
 }

@@ -11,6 +11,7 @@ struct TickersListItemViewModel: Equatable {
     let name: String?
     let symbol: String?
     let latest: String?
+    let stockName: String?
     let acronym: String?
     let country: String?
 }
@@ -21,6 +22,7 @@ extension TickersListItemViewModel {
         self.name = ticker.name
         self.symbol = ticker.symbol
         self.latest = ""
+        self.stockName = ticker.stock?.name
         self.acronym = ticker.stock?.acronym
         self.country = ticker.stock?.country
     }

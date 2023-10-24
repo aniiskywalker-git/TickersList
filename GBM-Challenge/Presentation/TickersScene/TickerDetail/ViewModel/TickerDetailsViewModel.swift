@@ -7,37 +7,99 @@
 
 import Foundation
 protocol TickerDetailsViewModelInput {
-    func updatePosterImage(width: Int)
+    func viewDidLoad()
+    func didGetTickerDetail()
+    func didSelectMetrics(dataSetSelected: DataSet)
+}
+
+enum DataSet: String {
+    case open = "Open"
+    case close = "Close"
+    case high = "High"
+    case low = "Low"
+    case volume = "Volume"
 }
 
 protocol TickerDetailsViewModelOutput {
-    var title: String { get }
-    var isPosterImageHidden: Bool { get }
-    var overview: String { get }
+    var itemDetail: Observable<[TickerDetailsItemViewModel]> { get}
+    var graphicDataSet: Observable<[String: [Double]]> { get }
+    var error: Observable<String> { get }
+    var tickerName: String { get }
+    var tickerSymbol: String { get }
+    var tickerStockName: String { get }
+    var tickerStockAcronym: String { get }
+    var tickerStockCountry: String { get }
+    var errorTitle: String { get }
 }
 
 typealias TickerDetailsViewModel = TickerDetailsViewModelInput & TickerDetailsViewModelOutput
 
 final class DefaultTickerDetailsViewModel: TickerDetailsViewModel {
     
-    private var TickerDetailLoadTask: Cancellable? { willSet { TickerDetailLoadTask?.cancel() } }
+    private let tickerDetailUseCase: TickerDetailUseCase
+    
+    private var tickerDetailLoadTask: Cancellable? { willSet { tickerDetailLoadTask?.cancel() } }
     private let mainQueue: DispatchQueueType
     
-    func updatePosterImage(width: Int) {
-        
+    var itemDetail: Observable<[TickerDetailsItemViewModel]> = Observable([])
+    var graphicDataSet: Observable<[String: [Double]]> = Observable([:])
+    var error: Observable<String> = Observable("")
+    var tickerName: String
+    var tickerSymbol: String
+    var tickerStockName: String
+    var tickerStockAcronym: String
+    var tickerStockCountry: String
+    var errorTitle: String = "Error: Can't retrieve EOD details"
+
+    init(ticker: TickersListItemViewModel,
+         tickerDetailUseCase: TickerDetailUseCase,
+         mainQueue: DispatchQueueType = DispatchQueue.main) {
+        self.tickerName = ticker.name ?? ""
+        self.tickerSymbol = ticker.symbol ?? ""
+        self.tickerStockName = ticker.stockName ?? ""
+        self.tickerStockAcronym = ticker.acronym ?? ""
+        self.tickerStockCountry = ticker.country ?? ""
+        self.mainQueue = mainQueue
+        self.tickerDetailUseCase = tickerDetailUseCase
     }
     
-    var title: String
+    func viewDidLoad() { }
     
-    var isPosterImageHidden: Bool
+    func didGetTickerDetail() {
+        loadItemDetail()
+    }
     
-    var overview: String
+    func didSelectMetrics(dataSetSelected: DataSet) {
+        switch dataSetSelected {
+        case .open:
+            graphicDataSet.value[dataSetSelected.rawValue] = itemDetail.value.compactMap { $0.open }
+        case .close:
+            graphicDataSet.value[dataSetSelected.rawValue] = itemDetail.value.compactMap { $0.close }
+        case .high:
+            graphicDataSet.value[dataSetSelected.rawValue] = itemDetail.value.compactMap { $0.high }
+        case .low:
+            graphicDataSet.value[dataSetSelected.rawValue] = itemDetail.value.compactMap { $0.low }
+        case .volume:
+            graphicDataSet.value[dataSetSelected.rawValue] = itemDetail.value.compactMap { $0.volume }
+        }
+    }
     
-    init(symbol: String,
-         mainQueue: DispatchQueueType = DispatchQueue.main) {
-        self.mainQueue = mainQueue
-        self.title = ""
-        self.isPosterImageHidden = true
-        self.overview = ""
+    private func loadItemDetail() {
+        tickerDetailLoadTask = tickerDetailUseCase.execute(symbol: tickerSymbol, completion: { [weak self] result in
+            self?.mainQueue.async {
+                switch result {
+                case .success(let tickerDetail):
+                    self?.itemDetail.value = tickerDetail.tickerDetail.eodItem.map(TickerDetailsItemViewModel.init)
+                case .failure(let error):
+                    self?.handle(error: error)
+                }
+            }
+        })
+    }
+    
+    private func handle(error: Error) {
+        self.error.value = error.isInternetConnectionError ?
+        "No internet connection" :
+        "Failed loading movies"
     }
 }

@@ -12,7 +12,7 @@ struct TickerDetail: Equatable {
     
     let name: String?
     let symbol: String?
-    let eodItem: [EodItem]?
+    let eodItem: [EodItem]
 }
 
 struct TickerDetailData: Equatable {

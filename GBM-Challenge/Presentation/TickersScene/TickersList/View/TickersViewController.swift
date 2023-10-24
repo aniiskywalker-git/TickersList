@@ -26,6 +26,7 @@ final class TickersViewController: UIViewController, StoryboardInstantiable, Ale
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        LoadingView.show()
         viewModel.didGetTickers()
         bind(to: viewModel)
     }
@@ -39,10 +40,17 @@ final class TickersViewController: UIViewController, StoryboardInstantiable, Ale
 
     private func setupViews() {
         title = viewModel.screenTitle
-        emptyDataLabel.text = viewModel.emptyDataTitle
+        if viewModel.items.value.isEmpty {
+            emptyDataLabel.isHidden = false
+            emptyDataLabel.text = viewModel.emptyDataTitle
+        } else {
+            emptyDataLabel.isHidden = true
+        }
+        
     }
     
     private func updateItems() {
+        LoadingView.hide()
         tickersTableViewController?.reload()
     }
     
@@ -55,6 +63,7 @@ final class TickersViewController: UIViewController, StoryboardInstantiable, Ale
     }
     
     private func showError(_ error: String) {
+        LoadingView.hide()
         guard !error.isEmpty else { return }
         showAlert(title: viewModel.errorTitle, message: error)
     }

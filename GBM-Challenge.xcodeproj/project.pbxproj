@@ -47,7 +47,13 @@
 		186527232AE1D1280028B815 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186527222AE1D1280028B815 /* Alertable.swift */; };
 		187556142AE30CAC0054C4B2 /* TickersListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187556132AE30CAC0054C4B2 /* TickersListItemCell.swift */; };
 		187556182AE3231F0054C4B2 /* TickerDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187556172AE3231F0054C4B2 /* TickerDetailsViewModel.swift */; };
+		1875561A2AE33ED50054C4B2 /* TickerDetailsItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187556192AE33ED50054C4B2 /* TickerDetailsItemViewModel.swift */; };
+		1875561C2AE376AD0054C4B2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875561B2AE376AD0054C4B2 /* Extensions.swift */; };
+		1875561F2AE3947E0054C4B2 /* ChartSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875561E2AE3947E0054C4B2 /* ChartSwiftUIView.swift */; };
 		18C5E1EE2AE2488E00C0352A /* TickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5E1ED2AE2488E00C0352A /* TickersViewController.swift */; };
+		18D804F42AE7241F00D2B106 /* TickerListUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D804F32AE7241F00D2B106 /* TickerListUseCaseTests.swift */; };
+		18D804F92AE7263C00D2B106 /* Ticker+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D804F82AE7263C00D2B106 /* Ticker+Stub.swift */; };
+		18D804FD2AE7376F00D2B106 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D804FC2AE7376F00D2B106 /* LoadingView.swift */; };
 		18F27EEF2ADF9D3F000DEB3D /* TickerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F27EEE2ADF9D3F000DEB3D /* TickerDetailsViewController.swift */; };
 		18F27EF12ADF9DE4000DEB3D /* TickersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F27EF02ADF9DE4000DEB3D /* TickersTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -113,7 +119,13 @@
 		186527222AE1D1280028B815 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		187556132AE30CAC0054C4B2 /* TickersListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersListItemCell.swift; sourceTree = "<group>"; };
 		187556172AE3231F0054C4B2 /* TickerDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailsViewModel.swift; sourceTree = "<group>"; };
+		187556192AE33ED50054C4B2 /* TickerDetailsItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailsItemViewModel.swift; sourceTree = "<group>"; };
+		1875561B2AE376AD0054C4B2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1875561E2AE3947E0054C4B2 /* ChartSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSwiftUIView.swift; sourceTree = "<group>"; };
 		18C5E1ED2AE2488E00C0352A /* TickersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersViewController.swift; sourceTree = "<group>"; };
+		18D804F32AE7241F00D2B106 /* TickerListUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListUseCaseTests.swift; sourceTree = "<group>"; };
+		18D804F82AE7263C00D2B106 /* Ticker+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticker+Stub.swift"; sourceTree = "<group>"; };
+		18D804FC2AE7376F00D2B106 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		18F27EEE2ADF9D3F000DEB3D /* TickerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailsViewController.swift; sourceTree = "<group>"; };
 		18F27EF02ADF9DE4000DEB3D /* TickersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +186,7 @@
 				186526D22AE0B7BE0028B815 /* Infrastructure */,
 				186526D32AE0B7D80028B815 /* Common */,
 				180E698D2ADF7C2A002EA27A /* AppDelegate.swift */,
+				1875561B2AE376AD0054C4B2 /* Extensions.swift */,
 				180E69962ADF7C2C002EA27A /* Assets.xcassets */,
 				180E69982ADF7C2C002EA27A /* LaunchScreen.storyboard */,
 				180E699B2ADF7C2C002EA27A /* Info.plist */,
@@ -184,6 +197,8 @@
 		180E69A32ADF7C2C002EA27A /* GBM-ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				18D804F52AE7242300D2B106 /* Domain */,
+				18D804F72AE7261E00D2B106 /* Stubs */,
 				180E69A42ADF7C2C002EA27A /* GBM_ChallengeTests.swift */,
 			);
 			path = "GBM-ChallengeTests";
@@ -376,6 +391,7 @@
 		186527042AE0F2A70028B815 /* TickerDetail */ = {
 			isa = PBXGroup;
 			children = (
+				1875561D2AE394660054C4B2 /* SwiftUIChart */,
 				186527062AE0F30C0028B815 /* ViewModel */,
 				186527052AE0F3070028B815 /* View */,
 			);
@@ -395,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				187556172AE3231F0054C4B2 /* TickerDetailsViewModel.swift */,
+				187556192AE33ED50054C4B2 /* TickerDetailsItemViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -423,6 +440,7 @@
 			children = (
 				186527212AE1D1100028B815 /* Protocols */,
 				1865271C2AE1BF2D0028B815 /* Observable.swift */,
+				18D804FC2AE7376F00D2B106 /* LoadingView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -444,6 +462,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		1875561D2AE394660054C4B2 /* SwiftUIChart */ = {
+			isa = PBXGroup;
+			children = (
+				1875561E2AE3947E0054C4B2 /* ChartSwiftUIView.swift */,
+			);
+			path = SwiftUIChart;
+			sourceTree = "<group>";
+		};
 		18C5E1F22AE2645E00C0352A /* TableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +477,30 @@
 				187556122AE30C860054C4B2 /* Cells */,
 			);
 			path = TableViewController;
+			sourceTree = "<group>";
+		};
+		18D804F52AE7242300D2B106 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				18D804F62AE7242D00D2B106 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		18D804F62AE7242D00D2B106 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				18D804F32AE7241F00D2B106 /* TickerListUseCaseTests.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		18D804F72AE7261E00D2B106 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				18D804F82AE7263C00D2B106 /* Ticker+Stub.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -602,8 +652,11 @@
 				186526F32AE0E3CB0028B815 /* DefaultTickersRepository.swift in Sources */,
 				186526E92AE0D7270028B815 /* RepositoryTask.swift in Sources */,
 				180E698E2ADF7C2A002EA27A /* AppDelegate.swift in Sources */,
+				18D804FD2AE7376F00D2B106 /* LoadingView.swift in Sources */,
 				186527192AE0F86E0028B815 /* TickersListViewModel.swift in Sources */,
+				1875561A2AE33ED50054C4B2 /* TickerDetailsItemViewModel.swift in Sources */,
 				186526CD2AE099B80028B815 /* APIEndpoints.swift in Sources */,
+				1875561C2AE376AD0054C4B2 /* Extensions.swift in Sources */,
 				186526B92ADFB1360028B815 /* NetworkConfig.swift in Sources */,
 				186526ED2AE0D7EF0028B815 /* Ticker.swift in Sources */,
 				18C5E1EE2AE2488E00C0352A /* TickersViewController.swift in Sources */,
@@ -614,6 +667,7 @@
 				186526F82AE0E9FD0028B815 /* TickerDetailRepository.swift in Sources */,
 				186526E52AE0D3E10028B815 /* TickerDetailResponseDTO+Mapping.swift in Sources */,
 				186527102AE0F53E0028B815 /* AppFlowCoordinator.swift in Sources */,
+				1875561F2AE3947E0054C4B2 /* ChartSwiftUIView.swift in Sources */,
 				1865270D2AE0F48D0028B815 /* AppConfigurations.swift in Sources */,
 				186526B52ADFAFED0028B815 /* Endpoint.swift in Sources */,
 				186527172AE0F6A80028B815 /* TickersSceneFlowCoordinator.swift in Sources */,
@@ -633,7 +687,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D804F92AE7263C00D2B106 /* Ticker+Stub.swift in Sources */,
 				180E69A52ADF7C2C002EA27A /* GBM_ChallengeTests.swift in Sources */,
+				18D804F42AE7241F00D2B106 /* TickerListUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
