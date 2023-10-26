@@ -4,7 +4,7 @@
 iOS Project implemented with Clean Layered Architecture and MVVM. This app uses Swift Package Manager.
 
 ## Features 📌
-* Added information in regards [Market Stack API](https://api.marketstack.com/v1/)
+* Added information from [Market Stack API](https://api.marketstack.com/v1/)
 * Added two simple views in order to show information retrieved from Market Stack API
 * View number one is a list of Tickers where display (1):
   - Ticker symbol
