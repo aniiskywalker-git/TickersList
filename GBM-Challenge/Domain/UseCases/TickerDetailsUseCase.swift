@@ -8,22 +8,22 @@
 import Foundation
 
 
-protocol TickerDetailUseCase {
+protocol TickerDetailsUseCase {
     func execute(symbol: String,
-        completion: @escaping (Result<TickerDetailData, Error>) -> Void
+        completion: @escaping (Result<TickerDetailsData, Error>) -> Void
     ) -> Cancellable?
 }
 
-final class DefaultTickerDetailUseCase: TickerDetailUseCase {
+final class DefaultTickerDetailsUseCase: TickerDetailsUseCase {
     
-    private let tickerDetailRepository: TickerDetailRepository
+    private let tickerDetailRepository: TickerDetailsRepository
     
-    init(tickerDetailRepository: TickerDetailRepository) {
+    init(tickerDetailRepository: TickerDetailsRepository) {
         self.tickerDetailRepository = tickerDetailRepository
     }
     
     func execute(symbol: String,
-                 completion: @escaping (Result<TickerDetailData, Error>) -> Void) -> Cancellable? {
+                 completion: @escaping (Result<TickerDetailsData, Error>) -> Void) -> Cancellable? {
         return tickerDetailRepository.fetchTickerDetail(symbol: symbol) { result in
             completion(result)
         }

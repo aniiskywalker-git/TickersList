@@ -24,8 +24,8 @@ final class TickersSceneDIContainer: TickersSceneFlowCoordinatorDependencies {
         DefaultTickersListUseCase(tickersRepository: makeTickersListRepository())
     }
     
-    func makeTickerDetailUseCase() -> TickerDetailUseCase {
-        DefaultTickerDetailUseCase(tickerDetailRepository: makeTickerDetailRepository())
+    func makeTickerDetailUseCase() -> TickerDetailsUseCase {
+        DefaultTickerDetailsUseCase(tickerDetailRepository: makeTickerDetailRepository())
     }
     
     // MARK: - Repositories
@@ -33,7 +33,7 @@ final class TickersSceneDIContainer: TickersSceneFlowCoordinatorDependencies {
         DefaultTickersRepository(dataTranferService: dependencies.apiDataTransferService)
     }
     
-    func makeTickerDetailRepository() -> TickerDetailRepository {
+    func makeTickerDetailRepository() -> TickerDetailsRepository {
         DefaultTickerDetailRepository(dataTranferService: dependencies.apiDataTransferService)
     }
     

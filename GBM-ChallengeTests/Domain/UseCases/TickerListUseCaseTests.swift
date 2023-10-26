@@ -10,7 +10,7 @@ import XCTest
 
 final class TickerListUseCaseTests: XCTestCase {
     
-    static let tickersList: [Ticker] = {
+    static let tickersList: Tickers = {
         let ticker = Tickers(tickers: [Ticker.stub(name: "Microsoft Corporation",
                                                    symbol: "MSFT",
                                                    stock: Stock.stub(name: "NASDAQ Stock Exchange",
@@ -37,27 +37,51 @@ final class TickerListUseCaseTests: XCTestCase {
     enum TickersRepositorySuccessError: Error {
         case failedFetching
     }
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    class TickersRepositoryMock: TickersRepository {
+        var result: Result<Tickers, Error>
+        var fetchCompletionCallsCount = 0
+        
+        init(result: Result<Tickers, Error>) {
+            self.result = result
+        }
+        
+        func fetchTickers(completion: @escaping (Result<Tickers, Error>) -> Void) -> Cancellable? {
+            completion(result)
+            fetchCompletionCallsCount += 1
+            return nil
         }
     }
-
+        
+    func testTickersListUseCase_whenSuccessfullyFetchesTickers() {
+        // given
+        var useCaseCompletionCallsCount = 0
+        let tickersRepository = TickersRepositoryMock(
+            result: .success(TickerListUseCaseTests.tickersList)
+        )
+        let useCase = DefaultTickersListUseCase(tickersRepository: tickersRepository)
+        // when
+        _ = useCase.execute(completion: { _ in
+            useCaseCompletionCallsCount += 1
+        })
+            
+        // then
+        XCTAssertEqual(useCaseCompletionCallsCount, 1)
+        XCTAssertEqual(tickersRepository.fetchCompletionCallsCount, 1)
+    }
+    
+    func testTickersUseCase_whenFailedFetchingTickers() {
+        // given
+        var useCaseCompletionCallsCountCount = 0
+        let useCase = DefaultTickersListUseCase(tickersRepository: TickersRepositoryMock(result: .failure(TickersRepositorySuccessError.failedFetching)))
+            
+        // when
+        _ = useCase.execute(completion: { _ in
+            useCaseCompletionCallsCountCount += 1
+        })
+            
+        // then
+        XCTAssertEqual(useCaseCompletionCallsCountCount, 1)
+    }
 }
+

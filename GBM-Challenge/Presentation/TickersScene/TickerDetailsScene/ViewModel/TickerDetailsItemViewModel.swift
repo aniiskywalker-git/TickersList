@@ -34,16 +34,3 @@ extension TickerDetailsItemViewModel {
         }
     }
 }
-
-private let dateFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateFormat = "MMM dd, yyyy"
-    formatter.timeZone = .current
-    return formatter
-}()
-
-private func addingOneDay(date: Date) -> String? {
-    let oneDay: TimeInterval = 86400
-    let datePlusDay = date.addingTimeInterval(oneDay)
-    return dateFormatter.string(from: datePlusDay)
-}

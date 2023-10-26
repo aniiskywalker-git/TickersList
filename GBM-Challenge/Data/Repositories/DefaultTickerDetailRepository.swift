@@ -21,9 +21,9 @@ final class DefaultTickerDetailRepository {
     }
 }
 
-extension DefaultTickerDetailRepository: TickerDetailRepository {
+extension DefaultTickerDetailRepository: TickerDetailsRepository {
 
-    func fetchTickerDetail(symbol: String, completion: @escaping (Result<TickerDetailData, Error>) -> Void) -> Cancellable? {
+    func fetchTickerDetail(symbol: String, completion: @escaping (Result<TickerDetailsData, Error>) -> Void) -> Cancellable? {
         let task = RepositoryTask()
         guard !task.isCancelled else { return nil }
         

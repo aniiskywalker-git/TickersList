@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         appFlowCoordinator?.start()
         window?.makeKeyAndVisible()
+        window?.overrideUserInterfaceStyle = .dark
         return true
     }
 }

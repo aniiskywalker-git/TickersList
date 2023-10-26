@@ -53,7 +53,7 @@ extension TickersDetailResponseDTO {
 // MARK: - Mappings to Domain
 
 extension TickersDetailResponseDTO {
-    func toDomain() -> TickerDetailData {
+    func toDomain() -> TickerDetailsData {
         return .init(tickerDetail: detail.toDomain())
     }
 }

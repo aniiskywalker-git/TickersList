@@ -31,9 +31,9 @@
 		186526ED2AE0D7EF0028B815 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526EC2AE0D7EF0028B815 /* Ticker.swift */; };
 		186526F32AE0E3CB0028B815 /* DefaultTickersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526F22AE0E3CB0028B815 /* DefaultTickersRepository.swift */; };
 		186526F52AE0E3E10028B815 /* DefaultTickerDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526F42AE0E3E10028B815 /* DefaultTickerDetailRepository.swift */; };
-		186526F82AE0E9FD0028B815 /* TickerDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526F72AE0E9FD0028B815 /* TickerDetailRepository.swift */; };
+		186526F82AE0E9FD0028B815 /* TickerDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526F72AE0E9FD0028B815 /* TickerDetailsRepository.swift */; };
 		186526FB2AE0ED0B0028B815 /* TickersListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526FA2AE0ED0B0028B815 /* TickersListUseCase.swift */; };
-		186526FD2AE0EE7F0028B815 /* TickerDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526FC2AE0EE7F0028B815 /* TickerDetailUseCase.swift */; };
+		186526FD2AE0EE7F0028B815 /* TickerDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186526FC2AE0EE7F0028B815 /* TickerDetailsUseCase.swift */; };
 		186527082AE0F3440028B815 /* TickerDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186527072AE0F3440028B815 /* TickerDetailsViewController.storyboard */; };
 		1865270D2AE0F48D0028B815 /* AppConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865270C2AE0F48D0028B815 /* AppConfigurations.swift */; };
 		186527102AE0F53E0028B815 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865270F2AE0F53E0028B815 /* AppFlowCoordinator.swift */; };
@@ -50,6 +50,15 @@
 		1875561A2AE33ED50054C4B2 /* TickerDetailsItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187556192AE33ED50054C4B2 /* TickerDetailsItemViewModel.swift */; };
 		1875561C2AE376AD0054C4B2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875561B2AE376AD0054C4B2 /* Extensions.swift */; };
 		1875561F2AE3947E0054C4B2 /* ChartSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875561E2AE3947E0054C4B2 /* ChartSwiftUIView.swift */; };
+		1887D67D2AE9CDAB007CF7CA /* TickerDetailsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887D67C2AE9CDAB007CF7CA /* TickerDetailsUseCaseTests.swift */; };
+		1887D67F2AE9CE61007CF7CA /* TickerDetails+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887D67E2AE9CE60007CF7CA /* TickerDetails+Stub.swift */; };
+		1887D6892AE9F531007CF7CA /* TickersListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887D6882AE9F531007CF7CA /* TickersListViewModelTests.swift */; };
+		1887D68B2AE9F823007CF7CA /* DispatchQueueTypeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887D68A2AE9F823007CF7CA /* DispatchQueueTypeMock.swift */; };
+		1887D68D2AEA0356007CF7CA /* TickerDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887D68C2AEA0356007CF7CA /* TickerDetailsViewModelTests.swift */; };
+		1887D6912AEA17D7007CF7CA /* NetworkConfigurableMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887D6902AEA17D7007CF7CA /* NetworkConfigurableMock.swift */; };
+		1887D6932AEA1831007CF7CA /* NetworkSessionManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887D6922AEA1831007CF7CA /* NetworkSessionManagerMock.swift */; };
+		1887D6952AEA1874007CF7CA /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887D6942AEA1874007CF7CA /* NetworkServiceTests.swift */; };
+		1887D6972AEA18B1007CF7CA /* DataTransferServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1887D6962AEA18B1007CF7CA /* DataTransferServiceTests.swift */; };
 		18C5E1EE2AE2488E00C0352A /* TickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C5E1ED2AE2488E00C0352A /* TickersViewController.swift */; };
 		18D804F42AE7241F00D2B106 /* TickerListUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D804F32AE7241F00D2B106 /* TickerListUseCaseTests.swift */; };
 		18D804F92AE7263C00D2B106 /* Ticker+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D804F82AE7263C00D2B106 /* Ticker+Stub.swift */; };
@@ -103,9 +112,9 @@
 		186526EC2AE0D7EF0028B815 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
 		186526F22AE0E3CB0028B815 /* DefaultTickersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTickersRepository.swift; sourceTree = "<group>"; };
 		186526F42AE0E3E10028B815 /* DefaultTickerDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTickerDetailRepository.swift; sourceTree = "<group>"; };
-		186526F72AE0E9FD0028B815 /* TickerDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailRepository.swift; sourceTree = "<group>"; };
+		186526F72AE0E9FD0028B815 /* TickerDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailsRepository.swift; sourceTree = "<group>"; };
 		186526FA2AE0ED0B0028B815 /* TickersListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersListUseCase.swift; sourceTree = "<group>"; };
-		186526FC2AE0EE7F0028B815 /* TickerDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailUseCase.swift; sourceTree = "<group>"; };
+		186526FC2AE0EE7F0028B815 /* TickerDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailsUseCase.swift; sourceTree = "<group>"; };
 		186527072AE0F3440028B815 /* TickerDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TickerDetailsViewController.storyboard; sourceTree = "<group>"; };
 		1865270C2AE0F48D0028B815 /* AppConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurations.swift; sourceTree = "<group>"; };
 		1865270F2AE0F53E0028B815 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -122,6 +131,15 @@
 		187556192AE33ED50054C4B2 /* TickerDetailsItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailsItemViewModel.swift; sourceTree = "<group>"; };
 		1875561B2AE376AD0054C4B2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1875561E2AE3947E0054C4B2 /* ChartSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartSwiftUIView.swift; sourceTree = "<group>"; };
+		1887D67C2AE9CDAB007CF7CA /* TickerDetailsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailsUseCaseTests.swift; sourceTree = "<group>"; };
+		1887D67E2AE9CE60007CF7CA /* TickerDetails+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TickerDetails+Stub.swift"; sourceTree = "<group>"; };
+		1887D6882AE9F531007CF7CA /* TickersListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersListViewModelTests.swift; sourceTree = "<group>"; };
+		1887D68A2AE9F823007CF7CA /* DispatchQueueTypeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueTypeMock.swift; sourceTree = "<group>"; };
+		1887D68C2AEA0356007CF7CA /* TickerDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		1887D6902AEA17D7007CF7CA /* NetworkConfigurableMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurableMock.swift; sourceTree = "<group>"; };
+		1887D6922AEA1831007CF7CA /* NetworkSessionManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionManagerMock.swift; sourceTree = "<group>"; };
+		1887D6942AEA1874007CF7CA /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		1887D6962AEA18B1007CF7CA /* DataTransferServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferServiceTests.swift; sourceTree = "<group>"; };
 		18C5E1ED2AE2488E00C0352A /* TickersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersViewController.swift; sourceTree = "<group>"; };
 		18D804F32AE7241F00D2B106 /* TickerListUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListUseCaseTests.swift; sourceTree = "<group>"; };
 		18D804F82AE7263C00D2B106 /* Ticker+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ticker+Stub.swift"; sourceTree = "<group>"; };
@@ -185,11 +203,9 @@
 				186526DD2AE0CF4A0028B815 /* Data */,
 				186526D22AE0B7BE0028B815 /* Infrastructure */,
 				186526D32AE0B7D80028B815 /* Common */,
-				180E698D2ADF7C2A002EA27A /* AppDelegate.swift */,
-				1875561B2AE376AD0054C4B2 /* Extensions.swift */,
-				180E69962ADF7C2C002EA27A /* Assets.xcassets */,
-				180E69982ADF7C2C002EA27A /* LaunchScreen.storyboard */,
+				1887D6802AE9D3AA007CF7CA /* Resources */,
 				180E699B2ADF7C2C002EA27A /* Info.plist */,
+				180E69982ADF7C2C002EA27A /* LaunchScreen.storyboard */,
 			);
 			path = "GBM-Challenge";
 			sourceTree = "<group>";
@@ -197,8 +213,11 @@
 		180E69A32ADF7C2C002EA27A /* GBM-ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				1887D6832AE9F483007CF7CA /* Presentation */,
+				1887D6842AE9F498007CF7CA /* Infrastructure */,
 				18D804F52AE7242300D2B106 /* Domain */,
 				18D804F72AE7261E00D2B106 /* Stubs */,
+				1887D6852AE9F4A5007CF7CA /* Mocks */,
 				180E69A42ADF7C2C002EA27A /* GBM_ChallengeTests.swift */,
 			);
 			path = "GBM-ChallengeTests";
@@ -328,7 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				186526FA2AE0ED0B0028B815 /* TickersListUseCase.swift */,
-				186526FC2AE0EE7F0028B815 /* TickerDetailUseCase.swift */,
+				186526FC2AE0EE7F0028B815 /* TickerDetailsUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -337,7 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				186526BF2ADFB3E80028B815 /* TickersRepository.swift */,
-				186526F72AE0E9FD0028B815 /* TickerDetailRepository.swift */,
+				186526F72AE0E9FD0028B815 /* TickerDetailsRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -347,7 +366,7 @@
 			children = (
 				186527002AE0F1E50028B815 /* Flows */,
 				186527012AE0F20B0028B815 /* TickersList */,
-				186527042AE0F2A70028B815 /* TickerDetail */,
+				186527042AE0F2A70028B815 /* TickerDetailsScene */,
 			);
 			path = TickersScene;
 			sourceTree = "<group>";
@@ -388,14 +407,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		186527042AE0F2A70028B815 /* TickerDetail */ = {
+		186527042AE0F2A70028B815 /* TickerDetailsScene */ = {
 			isa = PBXGroup;
 			children = (
 				1875561D2AE394660054C4B2 /* SwiftUIChart */,
 				186527062AE0F30C0028B815 /* ViewModel */,
 				186527052AE0F3070028B815 /* View */,
 			);
-			path = TickerDetail;
+			path = TickerDetailsScene;
 			sourceTree = "<group>";
 		};
 		186527052AE0F3070028B815 /* View */ = {
@@ -470,6 +489,76 @@
 			path = SwiftUIChart;
 			sourceTree = "<group>";
 		};
+		1887D6802AE9D3AA007CF7CA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				180E698D2ADF7C2A002EA27A /* AppDelegate.swift */,
+				1875561B2AE376AD0054C4B2 /* Extensions.swift */,
+				180E69962ADF7C2C002EA27A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1887D6832AE9F483007CF7CA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1887D6862AE9F4C4007CF7CA /* TickersScene */,
+				1887D6872AE9F4D1007CF7CA /* TickerDetailsScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1887D6842AE9F498007CF7CA /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				1887D68E2AEA1695007CF7CA /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		1887D6852AE9F4A5007CF7CA /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				1887D68A2AE9F823007CF7CA /* DispatchQueueTypeMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		1887D6862AE9F4C4007CF7CA /* TickersScene */ = {
+			isa = PBXGroup;
+			children = (
+				1887D6882AE9F531007CF7CA /* TickersListViewModelTests.swift */,
+			);
+			path = TickersScene;
+			sourceTree = "<group>";
+		};
+		1887D6872AE9F4D1007CF7CA /* TickerDetailsScene */ = {
+			isa = PBXGroup;
+			children = (
+				1887D68C2AEA0356007CF7CA /* TickerDetailsViewModelTests.swift */,
+			);
+			path = TickerDetailsScene;
+			sourceTree = "<group>";
+		};
+		1887D68E2AEA1695007CF7CA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1887D68F2AEA16A3007CF7CA /* Mocks */,
+				1887D6942AEA1874007CF7CA /* NetworkServiceTests.swift */,
+				1887D6962AEA18B1007CF7CA /* DataTransferServiceTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1887D68F2AEA16A3007CF7CA /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				1887D6902AEA17D7007CF7CA /* NetworkConfigurableMock.swift */,
+				1887D6922AEA1831007CF7CA /* NetworkSessionManagerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		18C5E1F22AE2645E00C0352A /* TableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +580,7 @@
 			isa = PBXGroup;
 			children = (
 				18D804F32AE7241F00D2B106 /* TickerListUseCaseTests.swift */,
+				1887D67C2AE9CDAB007CF7CA /* TickerDetailsUseCaseTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -499,6 +589,7 @@
 			isa = PBXGroup;
 			children = (
 				18D804F82AE7263C00D2B106 /* Ticker+Stub.swift */,
+				1887D67E2AE9CE60007CF7CA /* TickerDetails+Stub.swift */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -642,7 +733,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				186526B72ADFB0960028B815 /* NetworkService.swift in Sources */,
-				186526FD2AE0EE7F0028B815 /* TickerDetailUseCase.swift in Sources */,
+				186526FD2AE0EE7F0028B815 /* TickerDetailsUseCase.swift in Sources */,
 				186526E32AE0D1280028B815 /* TickersResponseDTO+Mapping.swift in Sources */,
 				187556142AE30CAC0054C4B2 /* TickersListItemCell.swift in Sources */,
 				1865271B2AE1B9040028B815 /* TickersListItemViewModel.swift in Sources */,
@@ -664,7 +755,7 @@
 				186526FB2AE0ED0B0028B815 /* TickersListUseCase.swift in Sources */,
 				186527152AE0F6720028B815 /* TickersSceneDIContainer.swift in Sources */,
 				186526F52AE0E3E10028B815 /* DefaultTickerDetailRepository.swift in Sources */,
-				186526F82AE0E9FD0028B815 /* TickerDetailRepository.swift in Sources */,
+				186526F82AE0E9FD0028B815 /* TickerDetailsRepository.swift in Sources */,
 				186526E52AE0D3E10028B815 /* TickerDetailResponseDTO+Mapping.swift in Sources */,
 				186527102AE0F53E0028B815 /* AppFlowCoordinator.swift in Sources */,
 				1875561F2AE3947E0054C4B2 /* ChartSwiftUIView.swift in Sources */,
@@ -688,7 +779,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D804F92AE7263C00D2B106 /* Ticker+Stub.swift in Sources */,
+				1887D6952AEA1874007CF7CA /* NetworkServiceTests.swift in Sources */,
+				1887D68D2AEA0356007CF7CA /* TickerDetailsViewModelTests.swift in Sources */,
+				1887D67F2AE9CE61007CF7CA /* TickerDetails+Stub.swift in Sources */,
+				1887D6912AEA17D7007CF7CA /* NetworkConfigurableMock.swift in Sources */,
 				180E69A52ADF7C2C002EA27A /* GBM_ChallengeTests.swift in Sources */,
+				1887D67D2AE9CDAB007CF7CA /* TickerDetailsUseCaseTests.swift in Sources */,
+				1887D68B2AE9F823007CF7CA /* DispatchQueueTypeMock.swift in Sources */,
+				1887D6972AEA18B1007CF7CA /* DataTransferServiceTests.swift in Sources */,
+				1887D6932AEA1831007CF7CA /* NetworkSessionManagerMock.swift in Sources */,
+				1887D6892AE9F531007CF7CA /* TickersListViewModelTests.swift in Sources */,
 				18D804F42AE7241F00D2B106 /* TickerListUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -871,6 +971,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = TickersViewController;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
@@ -902,6 +1003,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = TickersViewController;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.5;

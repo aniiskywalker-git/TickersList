@@ -36,7 +36,7 @@ typealias TickerDetailsViewModel = TickerDetailsViewModelInput & TickerDetailsVi
 
 final class DefaultTickerDetailsViewModel: TickerDetailsViewModel {
     
-    private let tickerDetailUseCase: TickerDetailUseCase
+    private let tickerDetailUseCase: TickerDetailsUseCase
     
     private var tickerDetailLoadTask: Cancellable? { willSet { tickerDetailLoadTask?.cancel() } }
     private let mainQueue: DispatchQueueType
@@ -52,7 +52,7 @@ final class DefaultTickerDetailsViewModel: TickerDetailsViewModel {
     var errorTitle: String = "Error: Can't retrieve EOD details"
 
     init(ticker: TickersListItemViewModel,
-         tickerDetailUseCase: TickerDetailUseCase,
+         tickerDetailUseCase: TickerDetailsUseCase,
          mainQueue: DispatchQueueType = DispatchQueue.main) {
         self.tickerName = ticker.name ?? ""
         self.tickerSymbol = ticker.symbol ?? ""

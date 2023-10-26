@@ -15,7 +15,7 @@ struct TickerDetail: Equatable {
     let eodItem: [EodItem]
 }
 
-struct TickerDetailData: Equatable {
+struct TickerDetailsData: Equatable {
     let tickerDetail: TickerDetail
 }
 
